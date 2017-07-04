@@ -17,7 +17,7 @@ class Probe80(object):
 	def __call__(self):
 		try:
 			r = requests.get(self.url, timeout=self.timeout)
-		except Exception, e:
+		except Exception as e:
 			return
 
 		self.content = r.text
